@@ -11,7 +11,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     console.log(event.request.url);
     if (event.request.url.includes('.jpg')) {
-        let newResp = fetch('/images/img2.jpg')
+        let newResp = fetch('images/img2.jpg')
         console.log("Es una imagen");
         event.respondWith(newResp);
     }

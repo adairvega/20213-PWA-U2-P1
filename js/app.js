@@ -4,7 +4,7 @@ const url = window.location.href;
 let swPath = '/20213-PWA-U2-P1/sw.js';
 
 if (navigator.serviceWorker) {
-    console.log("Muy bien, podemos jugar :D");
+    console.log("Service Worker Disponible");
 
     if (url.includes('localhost')) {
         swPath='/sw.js'
@@ -12,5 +12,5 @@ if (navigator.serviceWorker) {
 
     navigator.serviceWorker.register(swPath);
 } else {
-    console.log("Lastima cambia de navegador");    
+    console.log("Service Worker NO Disponible");    
 }
